@@ -4,107 +4,189 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Natalia Ortiz Diez Canseco</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  body{margin:0;font-family:Georgia,serif;background:#f4f6fa;color:#1f2a3c;line-height:1.6}
-  header{background:linear-gradient(135deg,#12284c,#2a5298);color:#fff;text-align:center;padding:48px 20px}
-  header h1{margin:0;font-size:2.2em}
-  header p{margin:8px 0 0;opacity:.9}
-  main{max-width:900px;margin:auto;padding:20px}
-  section{background:#fff;border-radius:12px;padding:20px 24px;margin:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-  h2{color:#12284c;border-bottom:2px solid #2a5298;padding-bottom:6px;margin-top:0}
-  ul{padding-left:20px}
-  .cursos{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px}
-  .cursos li{background:#eef2f9;border-radius:8px;padding:8px 12px}
-  .cursos span{display:block;font-size:.9em;color:#4a5b78}
-  a{color:#2a5298}
-  footer{text-align:center;padding:20px;color:#667}
+:root{--navy:#0b1d3a;--navy2:#16305c;--bur:#7a1f2b;--bur2:#9b2d3c;--cream:#f6f1ea;--ink:#1d2433}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Poppins",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7}
+h1,h2{font-family:"Merriweather",Georgia,serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 5%;background:rgba(11,29,58,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--bur)}
+nav b{color:#fff;letter-spacing:3px;font-family:"Merriweather",serif}
+nav div{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:#e9dfd3;text-decoration:none;font-size:.9em;position:relative}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--bur2);transition:.3s}
+nav a:hover::after{width:100%}
+.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:50px;color:#fff;padding:120px 6% 60px;background:linear-gradient(120deg,#0b1d3a,#16305c,#5a1824,#0b1d3a);background-size:300% 300%;animation:bg 16s ease infinite;background-position:center}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.hero .txt{max-width:560px}
+.tag{color:#d9b8bd;letter-spacing:4px;text-transform:uppercase;font-size:.8em}
+.hero h1{font-size:clamp(1.9em,5vw,3.2em);line-height:1.2;margin:10px 0}
+.hero p{opacity:.92;margin:6px 0}
+#typing{color:#f0d9dc;font-weight:500;min-height:1.8em;font-size:1.1em}
+.btn{display:inline-block;margin-top:20px;padding:12px 30px;border-radius:4px;background:var(--bur);color:#fff;font-weight:600;text-decoration:none;border:2px solid #fff;transition:.3s}
+.btn:hover{background:#fff;color:var(--bur);transform:translateY(-3px)}
+#foto{width:240px;height:240px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:0 0 0 7px var(--bur),0 22px 44px rgba(0,0,0,.45);animation:flota 6s ease-in-out infinite}
+@keyframes flota{50%{transform:translateY(-12px)}}
+.sec{max-width:1000px;margin:auto;padding:80px 22px 10px}
+h2{font-size:1.7em;color:var(--navy);margin:0 0 24px}
+h2::after{content:"";display:block;width:70px;height:4px;background:var(--bur);margin-top:8px}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1s}
+.reveal.show{opacity:1;transform:none}
+.card{background:#fff;border-radius:6px;padding:24px 28px;box-shadow:0 6px 20px rgba(11,29,58,.1);border-top:4px solid var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.bar{background:#e4e0da;border-radius:10px;height:12px;overflow:hidden;margin:4px 0 16px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--navy2),var(--bur));border-radius:10px;transition:width 1.6s ease}
+.chips span{display:inline-block;margin:4px;padding:7px 14px;border-radius:4px;background:var(--navy);color:#fff;font-size:.9em;transition:.3s}
+.chips span:hover{background:var(--bur);transform:scale(1.07)}
+.course{display:block;background:#fff;border-radius:4px;padding:12px 16px;border-left:5px solid var(--navy);transition:.3s;box-shadow:0 3px 10px rgba(11,29,58,.07);color:inherit;text-decoration:none}
+.course:hover{transform:translateX(6px);border-left-color:var(--bur)}
+.course small{display:block;color:#6a6f7c}
+.tl{border-left:3px solid var(--bur);padding-left:22px;margin-left:8px}
+.tl div{margin-bottom:20px;position:relative}
+.tl div::before{content:"";position:absolute;left:-32px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--navy);border:3px solid var(--bur)}
+.uni img{width:100%;max-height:380px;object-fit:cover;border-radius:6px;box-shadow:0 10px 30px rgba(11,29,58,.25)}
+.uni p{text-align:center;color:#6a6f7c;font-size:.9em}
+footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);color:#fff;text-align:center;padding:30px}
+#top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border:0;border-radius:50%;background:var(--bur);color:#fff;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}
+#top.on{opacity:1;pointer-events:auto}
 </style>
 </head>
 <body>
-<header>
-  <h1>Natalia Ortiz Diez Canseco</h1>
-  <p>Estudiante de Administración de Negocios · Universidad Católica San Pablo · Arequipa, Perú</p>
+
+<nav>
+  <b>NATALIA ORTIZ</b>
+  <div>
+    <a href="#sobre">Sobre mí</a>
+    <a href="#idiomas">Idiomas</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#companeros">Compañeros</a>
+  </div>
+</nav>
+
+<header class="hero" id="hero">
+  <div class="txt">
+    <span class="tag">Portafolio profesional</span>
+    <h1>Natalia Ortiz Diez Canseco</h1>
+    <p>Administración de Negocios · Universidad Católica San Pablo · Arequipa, Perú</p>
+    <div id="typing"></div>
+    <a class="btn" href="#sobre">Explorar</a>
+  </div>
+  <img id="foto" alt="Foto de Natalia Ortiz Diez Canseco" onerror="this.style.display='none'">
 </header>
-<main>
 
-<section>
+<section class="sec reveal" id="sobre">
   <h2>Sobre mí</h2>
-  <p>Soy estudiante de Administración de Negocios en la Universidad Católica San Pablo, con una marcada vocación por las finanzas y la banca. Obtuve el primer puesto de mi carrera en el semestre 2025-II y he complementado mi formación académica con experiencias internacionales y de servicio: trabajé como instructora de esquí durante mi Work and Travel (2025–2026) y soy voluntaria en CARA desde 2023.</p>
-  <p>Hablo español (nativo), inglés (C1) y francés (B2), con certificaciones Cambridge hasta C1 y diplomas DELF hasta B2. Me caracterizo por mi liderazgo, mi comunicación efectiva, mi capacidad de negociación y mi compromiso con el trabajo en equipo. Mi meta es desarrollar una carrera sólida en el sector financiero y bancario.</p>
+  <div class="card">
+    <p>Soy estudiante de Administración de Negocios en la Universidad Católica San Pablo, con una marcada vocación por las finanzas y la banca. Obtuve el primer puesto de mi carrera en el semestre 2025-II y he complementado mi formación con experiencias internacionales y de servicio: trabajé como instructora de esquí durante mi Work and Travel (2025–2026) y soy voluntaria en CARA desde 2023.</p>
+    <p>Hablo español (nativo), inglés (C1) y francés (B2), con certificaciones Cambridge hasta C1 y diplomas DELF hasta B2. Me caracterizo por mi liderazgo, mi comunicación efectiva, mi capacidad de negociación y mi compromiso con el trabajo en equipo. Mi meta es desarrollar una carrera sólida en el sector financiero y bancario.</p>
+  </div>
 </section>
 
-<section>
+<section class="sec reveal uni" id="universidad" style="display:none">
+  <h2>Mi universidad</h2>
+  <img id="uni" alt="Universidad Católica San Pablo">
+  <p>Universidad Católica San Pablo · Arequipa, Perú</p>
+</section>
+
+<section class="sec reveal" id="idiomas">
   <h2>Idiomas</h2>
-  <ul>
-    <li><b>Español:</b> nativo</li>
-    <li><b>Inglés:</b> C1 avanzado · Certificaciones Cambridge hasta C1</li>
-    <li><b>Francés:</b> B2 avanzado · Diplomas DELF hasta B2</li>
-  </ul>
+  <div class="card">
+    <b>Español</b> · Nativo<div class="bar"><i data-w="100"></i></div>
+    <b>Inglés</b> · C1 avanzado · Cambridge hasta C1<div class="bar"><i data-w="88"></i></div>
+    <b>Francés</b> · B2 avanzado · DELF hasta B2<div class="bar"><i data-w="72"></i></div>
+  </div>
 </section>
 
-<section>
+<section class="sec reveal" id="habilidades">
   <h2>Habilidades</h2>
-  <p><b>Blandas:</b> liderazgo, comunicación, negociación, trabajo en equipo, adaptabilidad, pensamiento analítico, resolución de problemas, gestión del tiempo y comunicación intercultural.</p>
-  <p><b>Técnicas:</b> Excel, Word, PowerPoint, programación, Canva, Google Docs, Google Sheets y Google Slides.</p>
+  <div class="card chips">
+    <p><b>Blandas</b></p>
+    <span>Liderazgo</span><span>Comunicación</span><span>Negociación</span><span>Trabajo en equipo</span><span>Adaptabilidad</span><span>Pensamiento analítico</span><span>Resolución de problemas</span><span>Gestión del tiempo</span><span>Comunicación intercultural</span>
+    <p><b>Técnicas</b></p>
+    <span>Excel</span><span>Word</span><span>PowerPoint</span><span>Programación</span><span>Canva</span><span>Google Docs</span><span>Google Sheets</span><span>Google Slides</span>
+  </div>
 </section>
 
-<section>
+<section class="sec reveal" id="experiencia">
   <h2>Experiencia y logros</h2>
-  <ul>
-    <li><b>Instructora de esquí</b> · Work and Travel (2025–2026)</li>
-    <li><b>Voluntaria en CARA</b> · 2023 – actualidad</li>
-    <li><b>Primer puesto de la carrera</b> · Semestre 2025-II</li>
-  </ul>
+  <div class="tl">
+    <div><b>Voluntaria en CARA</b><br>2023 – actualidad</div>
+    <div><b>Instructora de esquí</b><br>Work and Travel · 2025–2026</div>
+    <div><b>Primer puesto de la carrera</b><br>Semestre 2025-II</div>
+  </div>
 </section>
 
-<section>
+<section class="sec reveal" id="cursos">
   <h2>Cursos de la carrera y profesores</h2>
-  <ul class="cursos">
-    <li>Comunicación I<span>Milagros Valencia</span></li>
-    <li>Contabilidad para Administradores<span>Geraldine Farfán</span></li>
-    <li>Economía General<span>María Castillo</span></li>
-    <li>Fundamentos de Administración<span>Jhony Velásquez</span></li>
-    <li>Introducción a la Vida Universitaria<span>Gail Linares</span></li>
-    <li>Matemática Básica<span>Ana María Cano</span></li>
-    <li>Literatura y Teatro<span>Raúl Urday</span></li>
-    <li>Comunicación II<span>Carol Deglane</span></li>
-    <li>Fundamentos de Marketing<span>Ana Gomez Burns</span></li>
-    <li>Creatividad e Innovación<span>Ana Gomez Burns</span></li>
-    <li>Lógica y Gnoseología<span>Kristel Loayza</span></li>
-    <li>Música y Artes Visuales<span>Gonzalo Maldonado y Patricio García</span></li>
-    <li>Introducción a la Filosofía<span>Fernando Lacunza</span></li>
-    <li>Historia de Occidente I<span>Ana María Vargas</span></li>
-    <li>Antropología<span>Daniel Vargas Huanca</span></li>
-    <li>Historia de Occidente II<span>Gonzalo Presbítero</span></li>
-    <li>Fe y Razón<span>María de Jesús Chaname Dominguez</span></li>
-    <li>Álgebra y Geometría<span>Nancy Quispe</span></li>
-    <li>Derecho Empresarial<span>Marco Díaz Begazo</span></li>
-    <li>Análisis Financiero<span>María Belén Bocchio Linares</span></li>
-    <li>Comportamiento del Consumidor<span>Fabiola Postigo</span></li>
-    <li>Habilidades para el Trabajo en Equipo<span>Renzo Menchola</span></li>
-    <li>Liderazgo<span>Pablo Núñez Saija</span></li>
-    <li>Matemáticas Financieras<span>María Belén Bocchio Linares</span></li>
-    <li>Análisis de la Realidad Peruana<span>Alejandro Estenos</span></li>
-    <li>Moral<span>Joseph Zea Castillo</span></li>
-    <li>Cálculo en una Variable<span>Maribel Quiroz</span></li>
-    <li>Introducción a la Computación<span>Ernesto Vargas Cuadros</span></li>
-    <li>Costos y Planeamiento Presupuestal<span>José Miguel Montoro Benavente</span></li>
-    <li>Estadística y Probabilidades<span>Luisa Urure</span></li>
-    <li>Habilidades de Negociación<span>Thanud Febres Herrera</span></li>
-    <li>Operaciones Financieras<span>Jhonathan Vásquez Palazuelos</span></li>
-    <li>Teología<span>José Manuel Rodríguez Canales</span></li>
-    <li>Taller de Metodología de la Investigación<span>Renzo Rivera</span></li>
-  </ul>
+  <div class="grid" id="lista-cursos"></div>
 </section>
 
-<section>
+<section class="sec reveal" id="companeros">
   <h2>Páginas de mis compañeros</h2>
-  <p>Enlaces próximamente.</p>
-  <!-- Para agregar uno, copia esta línea dentro de un <ul>:
-  <li><a href="LINK_AQUI">Nombre del compañero</a></li> -->
+  <div class="grid" id="lista-companeros"></div>
 </section>
 
-</main>
-<footer>© 2026 Natalia Ortiz Diez Canseco</footer>
+<footer>© 2026 Natalia Ortiz Diez Canseco · Arequipa, Perú</footer>
+<button id="top" onclick="window.scrollTo({top:0})">↑</button>
+
+<script>
+// Nombres de tus imágenes subidas al repositorio
+const FOTO="foto.jpg";
+const UNI="universidad.jpg";
+
+// Foto personal
+document.getElementById("foto").src=FOTO;
+
+// Foto de la universidad: fondo de portada y sección propia (solo si carga)
+const test=new Image();
+test.onload=()=>{
+  const h=document.getElementById("hero");
+  h.style.animation="none";
+  h.style.backgroundSize="cover";
+  h.style.backgroundImage=`linear-gradient(rgba(11,29,58,.88),rgba(122,31,43,.72)),url(${UNI})`;
+  document.getElementById("uni").src=UNI;
+  document.getElementById("universidad").style.display="block";
+};
+test.src=UNI;
+
+const cursos=[
+["Comunicación I","Milagros Valencia"],["Contabilidad para Administradores","Geraldine Farfán"],["Economía General","María Castillo"],["Fundamentos de Administración","Jhony Velásquez"],["Introducción a la Vida Universitaria","Gail Linares"],["Matemática Básica","Ana María Cano"],["Literatura y Teatro","Raúl Urday"],["Comunicación II","Carol Deglane"],["Fundamentos de Marketing","Ana Gomez Burns"],["Creatividad e Innovación","Ana Gomez Burns"],["Lógica y Gnoseología","Kristel Loayza"],["Música y Artes Visuales","Gonzalo Maldonado y Patricio García"],["Introducción a la Filosofía","Fernando Lacunza"],["Historia de Occidente I","Ana María Vargas"],["Antropología","Daniel Vargas Huanca"],["Historia de Occidente II","Gonzalo Presbítero"],["Fe y Razón","María de Jesús Chaname Dominguez"],["Álgebra y Geometría","Nancy Quispe"],["Derecho Empresarial","Marco Díaz Begazo"],["Análisis Financiero","María Belén Bocchio Linares"],["Comportamiento del Consumidor","Fabiola Postigo"],["Habilidades para el Trabajo en Equipo","Renzo Menchola"],["Liderazgo","Pablo Núñez Saija"],["Matemáticas Financieras","María Belén Bocchio Linares"],["Análisis de la Realidad Peruana","Alejandro Estenos"],["Moral","Joseph Zea Castillo"],["Cálculo en una Variable","Maribel Quiroz"],["Introducción a la Computación","Ernesto Vargas Cuadros"],["Costos y Planeamiento Presupuestal","José Miguel Montoro Benavente"],["Estadística y Probabilidades","Luisa Urure"],["Habilidades de Negociación","Thanud Febres Herrera"],["Operaciones Financieras","Jhonathan Vásquez Palazuelos"],["Teología","José Manuel Rodríguez Canales"],["Taller de Metodología de la Investigación","Renzo Rivera"]
+];
+document.getElementById("lista-cursos").innerHTML=cursos.map(c=>`<div class="course">${c[0]}<small>${c[1]}</small></div>`).join("");
+
+// Para agregar compañeros: ["Nombre","https://link"],
+const companeros=[];
+document.getElementById("lista-companeros").innerHTML=companeros.length
+ ?companeros.map(c=>`<a class="course" href="${c[1]}" target="_blank">${c[0]}</a>`).join("")
+ :'<div class="card">Enlaces próximamente.</div>';
+
+// Texto que se escribe solo
+const frases=["Estudiante de Administración de Negocios","Apasionada por las finanzas y la banca","Trilingüe: español, inglés y francés"];
+let f=0,i=0,borrando=false;const t=document.getElementById("typing");
+(function escribir(){
+  const txt=frases[f];
+  t.textContent=txt.slice(0,i)+"|";
+  if(!borrando&&i<txt.length){i++;setTimeout(escribir,70)}
+  else if(!borrando){borrando=true;setTimeout(escribir,1500)}
+  else if(i>0){i--;setTimeout(escribir,35)}
+  else{borrando=false;f=(f+1)%frases.length;setTimeout(escribir,300)}
+})();
+
+// Aparecer al hacer scroll y llenar barras
+const obs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add("show");
+    e.target.querySelectorAll(".bar i").forEach(b=>b.style.width=b.dataset.w+"%");
+  }
+}),{threshold:.15});
+document.querySelectorAll(".reveal").forEach(s=>obs.observe(s));
+
+window.addEventListener("scroll",()=>document.getElementById("top").classList.toggle("on",scrollY>400));
+</script>
 </body>
 </html>
