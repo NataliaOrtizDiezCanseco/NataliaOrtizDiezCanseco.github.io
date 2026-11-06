@@ -19,17 +19,15 @@ nav div{display:flex;gap:16px;flex-wrap:wrap}
 nav a{color:#e9dfd3;text-decoration:none;font-size:.9em;position:relative}
 nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--bur2);transition:.3s}
 nav a:hover::after{width:100%}
-.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:50px;color:#fff;padding:120px 6% 60px;background:linear-gradient(120deg,#0b1d3a,#16305c,#5a1824,#0b1d3a);background-size:300% 300%;animation:bg 16s ease infinite;background-position:center}
+.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;padding:120px 6% 60px;background:linear-gradient(120deg,#0b1d3a,#16305c,#5a1824,#0b1d3a);background-size:300% 300%;animation:bg 16s ease infinite;background-position:center}
 @keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
-.hero .txt{max-width:560px}
+.hero .txt{max-width:640px}
 .tag{color:#d9b8bd;letter-spacing:4px;text-transform:uppercase;font-size:.8em}
-.hero h1{font-size:clamp(1.9em,5vw,3.2em);line-height:1.2;margin:10px 0}
+.hero h1{font-size:clamp(1.9em,5vw,3.4em);line-height:1.2;margin:10px 0}
 .hero p{opacity:.92;margin:6px 0}
 #typing{color:#f0d9dc;font-weight:500;min-height:1.8em;font-size:1.1em}
 .btn{display:inline-block;margin-top:20px;padding:12px 30px;border-radius:4px;background:var(--bur);color:#fff;font-weight:600;text-decoration:none;border:2px solid #fff;transition:.3s}
 .btn:hover{background:#fff;color:var(--bur);transform:translateY(-3px)}
-#foto{width:240px;height:240px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:0 0 0 7px var(--bur),0 22px 44px rgba(0,0,0,.45);animation:flota 6s ease-in-out infinite}
-@keyframes flota{50%{transform:translateY(-12px)}}
 .sec{max-width:1000px;margin:auto;padding:80px 22px 10px}
 h2{font-size:1.7em;color:var(--navy);margin:0 0 24px}
 h2::after{content:"";display:block;width:70px;height:4px;background:var(--bur);margin-top:8px}
@@ -76,7 +74,6 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
     <div id="typing"></div>
     <a class="btn" href="#sobre">Explorar</a>
   </div>
-  <img id="foto" alt="Foto de Natalia Ortiz Diez Canseco" onerror="this.style.display='none'">
 </header>
 
 <section class="sec reveal" id="sobre">
@@ -135,14 +132,10 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
 <button id="top" onclick="window.scrollTo({top:0})">↑</button>
 
 <script>
-// Nombres de tus imágenes subidas al repositorio
-const FOTO="foto.jpg";
-const UNI="universidad.jpg";
+// Foto de la universidad subida al repositorio
+const UNI="IMG_2347.webp";
 
-// Foto personal
-document.getElementById("foto").src=FOTO;
-
-// Foto de la universidad: fondo de portada y sección propia (solo si carga)
+// Fondo de portada y sección propia (solo si la imagen carga)
 const test=new Image();
 test.onload=()=>{
   const h=document.getElementById("hero");
