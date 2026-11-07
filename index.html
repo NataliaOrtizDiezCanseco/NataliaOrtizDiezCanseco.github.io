@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Natalia Ortiz Diez Canseco</title>
-  <meta name="description" content="Natalia Ortiz Diez Canseco, estudiante de Administración de Negocios en la Universidad Católica San Pablo, Arequipa, Perú. Portafolio profesional.">
+<meta name="description" content="Natalia Ortiz Diez Canseco, estudiante de Administración de Negocios en la Universidad Católica San Pablo, Arequipa, Perú. Portafolio profesional.">
 <meta name="author" content="Natalia Ortiz Diez Canseco">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,8 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:"Poppins",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7}
-h1,h2{font-family:"Merriweather",Georgia,serif}
+h1,h2,h3{font-family:"Merriweather",Georgia,serif}
+a{color:var(--bur)}
 nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 5%;background:rgba(11,29,58,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--bur)}
 nav b{color:#fff;letter-spacing:3px;font-family:"Merriweather",serif}
 nav div{display:flex;gap:16px;flex-wrap:wrap}
@@ -27,15 +28,20 @@ nav a:hover::after{width:100%}
 .tag{color:#d9b8bd;letter-spacing:4px;text-transform:uppercase;font-size:.8em}
 .hero h1{font-size:clamp(1.9em,5vw,3.4em);line-height:1.2;margin:10px 0}
 .hero p{opacity:.92;margin:6px 0}
-#typing{color:#f0d9dc;font-weight:500;min-height:1.8em;font-size:1.1em}
-.btn{display:inline-block;margin-top:20px;padding:12px 30px;border-radius:4px;background:var(--bur);color:#fff;font-weight:600;text-decoration:none;border:2px solid #fff;transition:.3s}
+.hero .sub{color:#f0d9dc;font-weight:500;font-size:1.05em}
+.btn{display:inline-block;margin-top:20px;padding:12px 30px;border-radius:4px;background:var(--bur);color:#fff;font-weight:600;text-decoration:none;border:2px solid var(--bur);transition:.3s}
 .btn:hover{background:#fff;color:var(--bur);transform:translateY(-3px)}
+.hero .btn{border-color:#fff}
+.btn.alt{background:transparent;color:var(--bur);margin-top:0}
+.btn.alt:hover{background:var(--bur);color:#fff}
 .sec{max-width:1000px;margin:auto;padding:80px 22px 10px}
 h2{font-size:1.7em;color:var(--navy);margin:0 0 24px}
 h2::after{content:"";display:block;width:70px;height:4px;background:var(--bur);margin-top:8px}
+h3{color:var(--navy);margin:28px 0 14px}
 .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1s}
 .reveal.show{opacity:1;transform:none}
 .card{background:#fff;border-radius:6px;padding:24px 28px;box-shadow:0 6px 20px rgba(11,29,58,.1);border-top:4px solid var(--navy)}
+.center{text-align:center}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
 .bar{background:#e4e0da;border-radius:10px;height:12px;overflow:hidden;margin:4px 0 16px}
 .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--navy2),var(--bur));border-radius:10px;transition:width 1.6s ease}
@@ -44,11 +50,17 @@ h2::after{content:"";display:block;width:70px;height:4px;background:var(--bur);m
 .course{display:block;background:#fff;border-radius:4px;padding:12px 16px;border-left:5px solid var(--navy);transition:.3s;box-shadow:0 3px 10px rgba(11,29,58,.07);color:inherit;text-decoration:none}
 .course:hover{transform:translateX(6px);border-left-color:var(--bur)}
 .course small{display:block;color:#6a6f7c}
+.soon{opacity:.6}
 .tl{border-left:3px solid var(--bur);padding-left:22px;margin-left:8px}
 .tl div{margin-bottom:20px;position:relative}
 .tl div::before{content:"";position:absolute;left:-32px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--navy);border:3px solid var(--bur)}
-.uni img{width:100%;max-height:380px;object-fit:cover;border-radius:6px;box-shadow:0 10px 30px rgba(11,29,58,.25)}
+.unilink{position:relative;display:block;overflow:hidden;border-radius:6px;box-shadow:0 10px 30px rgba(11,29,58,.25)}
+.unilink img{display:block;width:100%;max-height:380px;object-fit:cover;transition:transform .6s}
+.unilink:hover img{transform:scale(1.06)}
+.unilink span{position:absolute;left:0;right:0;bottom:0;padding:14px;background:linear-gradient(transparent,rgba(11,29,58,.9));color:#fff;font-weight:600;text-align:center}
 .uni p{text-align:center;color:#6a6f7c;font-size:.9em}
+.contact{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.contact .btn{margin-top:8px}
 footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);color:#fff;text-align:center;padding:30px}
 #top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border:0;border-radius:50%;background:var(--bur);color:#fff;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}
 #top.on{opacity:1;pointer-events:auto}
@@ -60,11 +72,11 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
   <b>NATALIA ORTIZ</b>
   <div>
     <a href="#sobre">Sobre mí</a>
-    <a href="#idiomas">Idiomas</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#experiencia">Experiencia</a>
+    <a href="#educacion">Educación</a>
     <a href="#cursos">Cursos</a>
-    <a href="#companeros">Compañeros</a>
+    <a href="#metas">Metas</a>
+    <a href="#redes">Redes</a>
+    <a href="#contacto">Contacto</a>
   </div>
 </nav>
 
@@ -73,7 +85,7 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
     <span class="tag">Portafolio profesional</span>
     <h1>Natalia Ortiz Diez Canseco</h1>
     <p>Administración de Negocios · Universidad Católica San Pablo · Arequipa, Perú</p>
-    <div id="typing"></div>
+    <p class="sub">Apasionada por las finanzas y la banca · Trilingüe: español, inglés y francés</p>
     <a class="btn" href="#sobre">Explorar</a>
   </div>
 </header>
@@ -86,10 +98,26 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
   </div>
 </section>
 
+<section class="sec reveal" id="educacion">
+  <h2>Educación</h2>
+  <div class="tl">
+    <div><b>Universidad Católica San Pablo</b> · Administración de Negocios<br>2024 – actualidad<br>Arequipa, Perú</div>
+    <div><b>Colegio Sagrados Corazones (SSCC)</b><br>2011 – 2023 · Arequipa, Perú<br>Representante estudiantil en mi último año de secundaria; me caractericé por mi liderazgo.</div>
+  </div>
+  <h3>Intercambios estudiantiles</h3>
+  <div class="tl">
+    <div><b>Londres, Inglaterra</b> · Programa <a href="https://www.ef.com.pe" target="_blank" rel="noopener">EF</a><br>Septiembre – octubre 2022</div>
+    <div><b>Francia</b> · Intercambio con mi colegio al <a href="https://saintmagloire.fr" target="_blank" rel="noopener">Colegio Saint-Magloire</a><br>Enero – marzo 2023</div>
+  </div>
+</section>
+
 <section class="sec reveal uni" id="universidad" style="display:none">
   <h2>Mi universidad</h2>
-  <img id="uni" alt="Universidad Católica San Pablo">
-  <p>Universidad Católica San Pablo · Arequipa, Perú</p>
+  <a class="unilink" href="https://ucsp.edu.pe" target="_blank" rel="noopener">
+    <img id="uni" alt="Universidad Católica San Pablo">
+    <span>Visitar la UCSP →</span>
+  </a>
+  <p>Toca la imagen para entrar al sitio de la universidad.</p>
 </section>
 
 <section class="sec reveal" id="idiomas">
@@ -115,13 +143,22 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
   <h2>Experiencia y logros</h2>
   <div class="tl">
     <div><b>Voluntaria en CARA</b><br>2023 – actualidad</div>
-    <div><b>Instructora de esquí</b><br>Work and Travel · 2025–2026</div>
+    <div><b>Instructora de esquí</b> · <a href="https://www.tahoedonner.com" target="_blank" rel="noopener">Tahoe Donner</a><br>Work and Travel · Diciembre 2025 – marzo 2026 (temporada 2025–2026)</div>
     <div><b>Primer puesto de la carrera</b><br>Semestre 2025-II</div>
+  </div>
+</section>
+
+<section class="sec reveal" id="carrera">
+  <h2>Mi carrera</h2>
+  <div class="card center">
+    <p>Administración de Negocios · Universidad Católica San Pablo</p>
+    <a class="btn" href="https://ucsp.edu.pe/carreras/administracion-negocios/?tab=institucional" target="_blank" rel="noopener">Conoce mi carrera</a>
   </div>
 </section>
 
 <section class="sec reveal" id="cursos">
   <h2>Cursos de la carrera y profesores</h2>
+  <p><a class="btn alt" href="https://cloudapps.ucsp.edu.pe/site/transparencia/?page=1&amp;type=Todos&amp;search=" target="_blank" rel="noopener">Buscar profesores de la UCSP →</a></p>
   <div class="grid" id="lista-cursos"></div>
 </section>
 
@@ -130,12 +167,47 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
   <div class="grid" id="lista-companeros"></div>
 </section>
 
+<section class="sec reveal" id="metas">
+  <h2>Metas e intereses</h2>
+  <div class="card">
+    <p>Me apasionan las finanzas y la banca. A futuro me gustaría trabajar en:</p>
+    <div class="grid">
+      <div class="course">BCRP<small>Banco Central de Reserva del Perú</small></div>
+      <div class="course">BCP<small>Banco de Crédito del Perú</small></div>
+      <div class="course">BBVA<small>BBVA Perú</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec reveal" id="redes">
+  <h2>Redes sociales</h2>
+  <div class="grid">
+    <a class="course" href="https://www.instagram.com/_natt_ortiz?xtok=MWh4emxhbTE5Z2xrdw%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener">Instagram<small>@_natt_ortiz</small></a>
+    <a class="course" href="https://www.facebook.com/share/19nTd1fQ51/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook<small>Natalia Ortiz</small></a>
+    <!-- Cuando tengas LinkedIn, cambia esta línea por:
+    <a class="course" href="TU_LINK_DE_LINKEDIN" target="_blank" rel="noopener">LinkedIn<small>Natalia Ortiz Diez Canseco</small></a> -->
+    <div class="course soon">LinkedIn<small>Próximamente</small></div>
+  </div>
+</section>
+
+<section class="sec reveal" id="contacto">
+  <h2>Contacto</h2>
+  <div class="card center">
+    <p>¿Quieres ponerte en contacto conmigo? Escríbeme:</p>
+    <div class="contact">
+      <a class="btn" href="mailto:nataliaortizdc@gmail.com">Correo personal</a>
+      <a class="btn" href="mailto:natalia.ortiz@ucsp.edu.pe">Correo institucional</a>
+    </div>
+    <p><small>nataliaortizdc@gmail.com · natalia.ortiz@ucsp.edu.pe</small></p>
+  </div>
+</section>
+
 <footer>© 2026 Natalia Ortiz Diez Canseco · Arequipa, Perú</footer>
 <button id="top" onclick="window.scrollTo({top:0})">↑</button>
 
 <script>
 // Foto de la universidad subida al repositorio
-const UNI="IMG_2347.webp";
+const UNI="IMG_2348.png";
 
 // Fondo de portada y sección propia (solo si la imagen carga)
 const test=new Image();
@@ -157,20 +229,8 @@ document.getElementById("lista-cursos").innerHTML=cursos.map(c=>`<div class="cou
 // Para agregar compañeros: ["Nombre","https://link"],
 const companeros=[];
 document.getElementById("lista-companeros").innerHTML=companeros.length
- ?companeros.map(c=>`<a class="course" href="${c[1]}" target="_blank">${c[0]}</a>`).join("")
+ ?companeros.map(c=>`<a class="course" href="${c[1]}" target="_blank" rel="noopener">${c[0]}</a>`).join("")
  :'<div class="card">Enlaces próximamente.</div>';
-
-// Texto que se escribe solo
-const frases=["Estudiante de Administración de Negocios","Apasionada por las finanzas y la banca","Trilingüe: español, inglés y francés"];
-let f=0,i=0,borrando=false;const t=document.getElementById("typing");
-(function escribir(){
-  const txt=frases[f];
-  t.textContent=txt.slice(0,i)+"|";
-  if(!borrando&&i<txt.length){i++;setTimeout(escribir,70)}
-  else if(!borrando){borrando=true;setTimeout(escribir,1500)}
-  else if(i>0){i--;setTimeout(escribir,35)}
-  else{borrando=false;f=(f+1)%frases.length;setTimeout(escribir,300)}
-})();
 
 // Aparecer al hacer scroll y llenar barras
 const obs=new IntersectionObserver(es=>es.forEach(e=>{
@@ -181,6 +241,7 @@ const obs=new IntersectionObserver(es=>es.forEach(e=>{
 }),{threshold:.15});
 document.querySelectorAll(".reveal").forEach(s=>obs.observe(s));
 
+// Botón volver arriba
 window.addEventListener("scroll",()=>document.getElementById("top").classList.toggle("on",scrollY>400));
 </script>
 </body>
