@@ -55,6 +55,9 @@ h3{color:var(--navy);margin:28px 0 14px}
 .tl{border-left:3px solid var(--bur);padding-left:22px;margin-left:8px}
 .tl div{margin-bottom:20px;position:relative}
 .tl div::before{content:"";position:absolute;left:-32px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--navy);border:3px solid var(--bur)}
+.thumb{display:block;max-width:240px;width:100%;margin-top:10px;border-radius:6px;box-shadow:0 6px 16px rgba(11,29,58,.25)}
+.thumb.sm{max-width:180px;max-height:240px;object-fit:cover}
+.cap{display:block;font-size:.8em;color:#6a6f7c}
 .unilink{position:relative;display:block;overflow:hidden;border-radius:6px;box-shadow:0 10px 30px rgba(11,29,58,.25)}
 .unilink img{display:block;width:100%;max-height:380px;object-fit:cover;transition:transform .6s}
 .unilink:hover img{transform:scale(1.06)}
@@ -144,15 +147,23 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
   <h2>Experiencia y logros</h2>
   <div class="tl">
     <div><b>Instructora de esquí</b> · <a href="https://www.tahoedonner.com" target="_blank" rel="noopener">Tahoe Donner</a><br>Work and Travel · Diciembre 2025 – marzo 2026 (temporada 2025–2026)<br>Instrucción de esquí a niños de 3 a 6 años, fortaleciendo mis habilidades de comunicación pedagógica e intercultural.</div>
-    <div><b>Staff · Área comercial y edecanes</b> · <a href="https://cara.org.pe" target="_blank" rel="noopener">CARA</a> (Congreso Anual sobre la Región Arequipa)<br>2023 – 2026</div>
-    <div><b>Primer puesto de la carrera</b><br>Administración de Negocios · Semestre 2025-II</div>
+    <div><b>Staff · Área comercial y edecanes</b> · <a href="https://cara.org.pe" target="_blank" rel="noopener">CARA</a> (Congreso Anual sobre la Región Arequipa)<br>2023 – actualidad</div>
+    <div><b>Primer puesto de la carrera</b><br>Administración de Negocios · Semestre 2025-II
+      <img class="thumb" src="IMG_6553.jpeg" alt="Reconocimiento al primer puesto de la carrera" onerror="this.style.display='none';this.nextElementSibling.style.display='none'">
+      <span class="cap">Ceremonia de reconocimiento</span>
+    </div>
     <div><b>Representante estudiantil</b> · Colegio SS.CC.<br>2023</div>
   </div>
   <h3>Formación artística e intereses</h3>
   <div class="grid">
     <div class="course">Teatro, actuación y dirección<small>Integrante de los elencos teatrales de la UCSP y de mi colegio, con participación en numerosas producciones y especial interés por la dirección escénica.</small></div>
-    <div class="course">Piano clásico<small>Estudio del instrumento entre 2015 y 2022, con práctica continua hasta la actualidad.</small></div>
+    <div class="course">Piano clásico<small>Formación con el método Suzuki y práctica activa del instrumento entre 2015 y 2022.</small>
+      <small><a href="https://asociacionsuzukidelperu.org" target="_blank" rel="noopener">Asociación Suzuki del Perú</a> · <a href="https://youtu.be/WbzjppNO6js" target="_blank" rel="noopener">Ver mi interpretación (video)</a></small>
+    </div>
     <div class="course">Lectura<small>Hábito de lectura que fortalece mi pensamiento crítico y mi capacidad de comunicación.</small></div>
+    <div class="course">Esquí y deportes de invierno<small>Práctica y enseñanza del esquí, con experiencia como instructora de niños de 3 a 6 años.</small>
+      <img class="thumb sm" src="FullSizeRender.jpeg" alt="Natalia con su uniforme de instructora de esquí" onerror="this.style.display='none'">
+    </div>
   </div>
 </section>
 
@@ -166,8 +177,11 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
 
 <section class="sec reveal" id="cursos">
   <h2>Cursos de la carrera y docentes</h2>
-  <p><a class="btn alt" href="https://cloudapps.ucsp.edu.pe/site/transparencia/?page=1&amp;type=Todos&amp;search=" target="_blank" rel="noopener">Buscar docentes de la UCSP →</a></p>
-  <div class="grid" id="lista-cursos"></div>
+  <div class="card center">
+    <p>Consulta la lista completa de cursos de la carrera y de sus docentes, con acceso a sus perfiles profesionales.</p>
+    <a class="btn" href="cursos.html" target="_blank" rel="noopener">Cursos de la carrera y docentes</a>
+    <p><a class="btn alt" style="margin-top:14px" href="https://cloudapps.ucsp.edu.pe/site/transparencia/?page=1&amp;type=Todos&amp;search=" target="_blank" rel="noopener">Buscar docentes de la UCSP →</a></p>
+  </div>
 </section>
 
 <section class="sec reveal" id="companeros">
@@ -193,9 +207,7 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
   <div class="grid">
     <a class="course" href="https://www.instagram.com/_natt_ortiz?xtok=MWh4emxhbTE5Z2xrdw%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener">Instagram<small>@_natt_ortiz</small></a>
     <a class="course" href="https://www.facebook.com/share/19nTd1fQ51/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook<small>Natalia Ortiz</small></a>
-    <!-- Cuando tengas LinkedIn, cambia la línea de abajo por:
-    <a class="course" href="TU_LINK_DE_LINKEDIN" target="_blank" rel="noopener">LinkedIn<small>Natalia Ortiz Diez Canseco</small></a> -->
-    <div class="course soon">LinkedIn<small>Próximamente</small></div>
+    <a class="course" href="https://www.linkedin.com/in/natalia-ortiz-diez-canseco-10a5b044a" target="_blank" rel="noopener">LinkedIn<small>Natalia Ortiz Diez Canseco</small></a>
   </div>
 </section>
 
@@ -218,7 +230,6 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
 // Foto de la universidad subida al repositorio
 const UNI="IMG_2348.png";
 
-// Fondo de portada y sección propia (solo si la imagen carga)
 const test=new Image();
 test.onload=()=>{
   const h=document.getElementById("hero");
@@ -230,13 +241,11 @@ test.onload=()=>{
 };
 test.src=UNI;
 
-const cursos=[
-["Comunicación I","Milagros Valencia"],["Contabilidad para Administradores","Geraldine Farfán"],["Economía General","María Castillo"],["Fundamentos de Administración","Jhony Velásquez"],["Introducción a la Vida Universitaria","Gail Linares"],["Matemática Básica","Ana María Cano"],["Literatura y Teatro","Raúl Urday"],["Comunicación II","Carol Deglane"],["Fundamentos de Marketing","Ana Gomez Burns"],["Creatividad e Innovación","Ana Gomez Burns"],["Lógica y Gnoseología","Kristel Loayza"],["Música y Artes Visuales","Gonzalo Maldonado y Patricio García"],["Introducción a la Filosofía","Fernando Lacunza"],["Historia de Occidente I","Ana María Vargas"],["Antropología","Daniel Vargas Huanca"],["Historia de Occidente II","Gonzalo Presbítero"],["Fe y Razón","María de Jesús Chaname Dominguez"],["Álgebra y Geometría","Nancy Quispe"],["Derecho Empresarial","Marco Díaz Begazo"],["Análisis Financiero","María Belén Bocchio Linares"],["Comportamiento del Consumidor","Fabiola Postigo"],["Habilidades para el Trabajo en Equipo","Renzo Menchola"],["Liderazgo","Pablo Núñez Saija"],["Matemáticas Financieras","María Belén Bocchio Linares"],["Análisis de la Realidad Peruana","Alejandro Estenos"],["Moral","Joseph Zea Castillo"],["Cálculo en una Variable","Maribel Quiroz"],["Introducción a la Computación","Ernesto Vargas Cuadros"],["Costos y Planeamiento Presupuestal","José Miguel Montoro Benavente"],["Estadística y Probabilidades","Luisa Urure"],["Habilidades de Negociación","Thanud Febres Herrera"],["Operaciones Financieras","Jhonathan Vásquez Palazuelos"],["Teología","José Manuel Rodríguez Canales"],["Taller de Metodología de la Investigación","Renzo Rivera"]
+// Para agregar compañeros: ["Nombre Apellido","https://link"],
+const companeros=[
+["Macarena Enriquez","https://macarenaenriquez-oss.github.io/maca.github.io/"],
+["Eduardo Flores","https://eduardosebastianfloressoto.github.io"]
 ];
-document.getElementById("lista-cursos").innerHTML=cursos.map(c=>`<div class="course">${c[0]}<small>${c[1]}</small></div>`).join("");
-
-// Para agregar compañeros: ["Nombre","https://link"],
-const companeros=[];
 document.getElementById("lista-companeros").innerHTML=companeros.length
  ?companeros.map(c=>`<a class="course" href="${c[1]}" target="_blank" rel="noopener">${c[0]}</a>`).join("")
  :'<div class="card">Enlaces próximamente.</div>';
@@ -250,7 +259,6 @@ const obs=new IntersectionObserver(es=>es.forEach(e=>{
 }),{threshold:.15});
 document.querySelectorAll(".reveal").forEach(s=>obs.observe(s));
 
-// Botón volver arriba
 window.addEventListener("scroll",()=>document.getElementById("top").classList.toggle("on",scrollY>400));
 </script>
 </body>
