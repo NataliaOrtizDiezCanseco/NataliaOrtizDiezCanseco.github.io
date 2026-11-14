@@ -260,8 +260,11 @@ test.src=UNI;
 // Para agregar compañeros: ["Nombre Apellido","https://link"],
 const companeros=[
 ["Macarena Enriquez","https://macarenaenriquez-oss.github.io/maca.github.io/"],
-["Eduardo Flores","https://eduardosebastianfloressoto.github.io"]
+["Eduardo Flores","https://eduardosebastianfloressoto.github.io"],
+["Luciana Cárdenas","https://luciananicolecardenaslopez.github.io"],
+["Mattias Galdos","https://mattiasgaldosibarcena.github.io"]
 ];
+
 document.getElementById("lista-companeros").innerHTML=companeros.length
  ?companeros.map(c=>`<a class="course" href="${c[1]}" target="_blank" rel="noopener">${c[0]}</a>`).join("")
  :'<div class="card">Enlaces próximamente.</div>';
