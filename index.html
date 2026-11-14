@@ -248,10 +248,6 @@ const UNI="IMG_2348.png";
 
 const test=new Image();
 test.onload=()=>{
-  const h=document.getElementById("hero");
-  h.style.animation="none";
-  h.style.backgroundSize="cover";
-  h.style.backgroundImage=`linear-gradient(rgba(11,29,58,.88),rgba(122,31,43,.72)),url(${UNI})`;
   document.getElementById("uni").src=UNI;
   document.getElementById("universidad").style.display="block";
 };
@@ -262,7 +258,8 @@ const companeros=[
 ["Macarena Enriquez","https://macarenaenriquez-oss.github.io/maca.github.io/"],
 ["Eduardo Flores","https://eduardosebastianfloressoto.github.io"],
 ["Luciana Cárdenas","https://luciananicolecardenaslopez.github.io"],
-["Mattias Galdos","https://mattiasgaldosibarcena.github.io"]
+["Mattias Galdos","https://mattiasgaldosibarcena.github.io"],
+["Rafael Chirinos","https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/"]
 ];
 
 document.getElementById("lista-companeros").innerHTML=companeros.length
