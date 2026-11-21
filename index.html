@@ -12,62 +12,64 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0b1d3a;--navy2:#16305c;--bur:#7a1f2b;--bur2:#9b2d3c;--cream:#f6f1ea;--ink:#1d2433}
+:root{--navy:#0b1d3a;--navy2:#16305c;--bur:#7a1f2b;--bur2:#9b2d3c;--cream:#f6f1ea;--ink:#1d2433;
+--silver:#c3c8d1;--silver3:#8f97a5;--silverGrad:linear-gradient(135deg,#f1f3f6 0%,#b9bfca 45%,#eef0f4 60%,#98a0ae 100%)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:"Poppins",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7}
 h1,h2,h3{font-family:"Merriweather",Georgia,serif}
 a{color:var(--bur)}
-nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 5%;background:rgba(11,29,58,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--bur)}
-nav b{color:#fff;letter-spacing:3px;font-family:"Merriweather",serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 5%;background:rgba(11,29,58,.92);backdrop-filter:blur(8px);border-bottom:2px solid transparent;border-image:linear-gradient(90deg,var(--bur),var(--silver),var(--bur)) 1}
+nav b{letter-spacing:3px;font-family:"Merriweather",serif;background:var(--silverGrad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 nav div{display:flex;gap:16px;flex-wrap:wrap}
 nav a{color:#e9dfd3;text-decoration:none;font-size:.9em;position:relative}
-nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--bur2);transition:.3s}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--silver);transition:.3s}
 nav a:hover::after{width:100%}
 .hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;padding:120px 6% 60px;background:linear-gradient(120deg,#0b1d3a,#16305c,#5a1824,#0b1d3a);background-size:300% 300%;animation:bg 16s ease infinite;background-position:center}
 @keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
 .hero .txt{max-width:640px}
-.tag{color:#d9b8bd;letter-spacing:4px;text-transform:uppercase;font-size:.8em}
-.hero h1{font-size:clamp(1.9em,5vw,3.4em);line-height:1.2;margin:10px 0}
+.tag{color:var(--silver);letter-spacing:4px;text-transform:uppercase;font-size:.8em}
+.hero h1{font-size:clamp(1.9em,5vw,3.4em);line-height:1.2;margin:10px 0;text-shadow:0 2px 14px rgba(195,200,209,.25)}
 .hero p{opacity:.92;margin:6px 0}
 .hero .sub{color:#f0d9dc;font-weight:500;font-size:1.05em}
+.rule{width:130px;height:3px;margin:20px auto 4px;border-radius:2px;background:var(--silverGrad)}
 .btn{display:inline-block;margin-top:20px;padding:12px 30px;border-radius:4px;background:var(--bur);color:#fff;font-weight:600;text-decoration:none;border:2px solid var(--bur);transition:.3s}
 .btn:hover{background:#fff;color:var(--bur);transform:translateY(-3px)}
-.hero .btn{border-color:#fff}
+.hero .btn{border-color:var(--silver)}
 .btn.alt{background:transparent;color:var(--bur);margin-top:0}
 .btn.alt:hover{background:var(--bur);color:#fff}
 .sec{max-width:1000px;margin:auto;padding:80px 22px 10px}
 h2{font-size:1.7em;color:var(--navy);margin:0 0 24px}
-h2::after{content:"";display:block;width:70px;height:4px;background:var(--bur);margin-top:8px}
+h2::after{content:"";display:block;width:90px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--bur),var(--silver));margin-top:8px}
 h3{color:var(--navy);margin:28px 0 14px}
 .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1s}
 .reveal.show{opacity:1;transform:none}
-.card{background:#fff;border-radius:6px;padding:24px 28px;box-shadow:0 6px 20px rgba(11,29,58,.1);border-top:4px solid var(--navy)}
+.card{background:#fff;border-radius:6px;padding:24px 28px;box-shadow:0 6px 20px rgba(11,29,58,.1);border:1px solid #d9dde4;border-top:4px solid var(--navy)}
 .center{text-align:center}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
 .bar{background:#e4e0da;border-radius:10px;height:12px;overflow:hidden;margin:4px 0 16px}
-.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--navy2),var(--bur));border-radius:10px;transition:width 1.6s ease}
-.chips span{display:inline-block;margin:4px;padding:7px 14px;border-radius:4px;background:var(--navy);color:#fff;font-size:.9em;transition:.3s}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--navy2),var(--silver),var(--bur));border-radius:10px;transition:width 1.6s ease}
+.chips span{display:inline-block;margin:4px;padding:7px 14px;border-radius:4px;background:var(--navy);color:#fff;font-size:.9em;border:1px solid var(--silver3);transition:.3s}
 .chips span:hover{background:var(--bur);transform:scale(1.07)}
-.course{display:block;background:#fff;border-radius:4px;padding:12px 16px;border-left:5px solid var(--navy);transition:.3s;box-shadow:0 3px 10px rgba(11,29,58,.07);color:inherit;text-decoration:none}
+.course{display:block;background:#fff;border-radius:4px;padding:12px 16px;border:1px solid #dde1e8;border-left:5px solid var(--navy);transition:.3s;box-shadow:0 3px 10px rgba(11,29,58,.07);color:inherit;text-decoration:none}
 .course:hover{transform:translateX(6px);border-left-color:var(--bur)}
 .course small{display:block;color:#6a6f7c}
 .soon{opacity:.6}
 .tl{border-left:3px solid var(--bur);padding-left:22px;margin-left:8px}
 .tl div{margin-bottom:20px;position:relative}
-.tl div::before{content:"";position:absolute;left:-32px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--navy);border:3px solid var(--bur)}
-.thumb{display:block;max-width:240px;width:100%;margin-top:10px;border-radius:6px;box-shadow:0 6px 16px rgba(11,29,58,.25)}
+.tl div::before{content:"";position:absolute;left:-32px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--navy);border:3px solid var(--silver)}
+.thumb{display:block;max-width:240px;width:100%;margin-top:10px;border-radius:6px;border:3px solid #fff;box-shadow:0 0 0 2px var(--silver),0 6px 16px rgba(11,29,58,.25)}
 .thumb.sm{max-width:180px;max-height:240px;object-fit:cover}
 .cap{display:block;font-size:.8em;color:#6a6f7c}
-.unilink{position:relative;display:block;overflow:hidden;border-radius:6px;box-shadow:0 10px 30px rgba(11,29,58,.25)}
+.unilink{position:relative;display:block;overflow:hidden;border-radius:6px;border:2px solid var(--silver);box-shadow:0 10px 30px rgba(11,29,58,.25)}
 .unilink img{display:block;width:100%;max-height:380px;object-fit:cover;transition:transform .6s}
 .unilink:hover img{transform:scale(1.06)}
 .unilink span{position:absolute;left:0;right:0;bottom:0;padding:14px;background:linear-gradient(transparent,rgba(11,29,58,.9));color:#fff;font-weight:600;text-align:center}
 .uni p{text-align:center;color:#6a6f7c;font-size:.9em}
 .contact{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 .contact .btn{margin-top:8px}
-footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);color:#fff;text-align:center;padding:30px}
-#top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border:0;border-radius:50%;background:var(--bur);color:#fff;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}
+footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--silver);color:var(--silver);text-align:center;padding:30px}
+#top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border:1px solid var(--silver3);border-radius:50%;background:var(--silverGrad);color:var(--navy);font-size:20px;font-weight:700;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}
 #top.on{opacity:1;pointer-events:auto}
 </style>
 </head>
@@ -94,6 +96,7 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
     <h1>Natalia Ortiz Diez Canseco</h1>
     <p>Administración de Negocios · Universidad Católica San Pablo · Arequipa, Perú</p>
     <p class="sub">Orientada a las finanzas y la banca · Trilingüe: español, inglés y francés</p>
+    <div class="rule"></div>
     <a class="btn" href="#sobre">Explorar</a>
   </div>
 </header>
@@ -239,15 +242,13 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
   </div>
 </section>
 
-const companeros=[
-["Macarena Enriquez","https://macarenaenriquez-oss.github.io/maca.github.io/"],
-["Eduardo Flores","https://eduardosebastianfloressoto.github.io"],
-["Luciana Cárdenas","https://luciananicolecardenaslopez.github.io"],
-["Mattias Galdos","https://mattiasgaldosibarcena.github.io"],
-["Rafael Chirinos","https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/"],
-["Renzo Arenas","https://renzo-arenas.github.io/RenzoArenas.github.io/"],
-["Abel Gamboa","https://abelgamboa.github.io/abelvalentinogamboaespejo.github.io/"]
-];
+<footer>© 2026 Natalia Ortiz Diez Canseco · Arequipa, Perú</footer>
+<button id="top" onclick="window.scrollTo({top:0})">↑</button>
+
+<script>
+// Foto de la universidad subida al repositorio
+const UNI="IMG_2348.png";
+
 const test=new Image();
 test.onload=()=>{
   document.getElementById("uni").src=UNI;
@@ -261,9 +262,10 @@ const companeros=[
 ["Eduardo Flores","https://eduardosebastianfloressoto.github.io"],
 ["Luciana Cárdenas","https://luciananicolecardenaslopez.github.io"],
 ["Mattias Galdos","https://mattiasgaldosibarcena.github.io"],
-["Rafael Chirinos","https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/"]
+["Rafael Chirinos","https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/"],
+["Renzo Arenas","https://renzo-arenas.github.io/RenzoArenas.github.io/"],
+["Abel Gamboa","https://abelgamboa.github.io/abelvalentinogamboaespejo.github.io/"]
 ];
-
 document.getElementById("lista-companeros").innerHTML=companeros.length
  ?companeros.map(c=>`<a class="course" href="${c[1]}" target="_blank" rel="noopener">${c[0]}</a>`).join("")
  :'<div class="card">Enlaces próximamente.</div>';
