@@ -239,13 +239,15 @@ footer{margin-top:80px;background:var(--navy);border-top:4px solid var(--bur);co
   </div>
 </section>
 
-<footer>© 2026 Natalia Ortiz Diez Canseco · Arequipa, Perú</footer>
-<button id="top" onclick="window.scrollTo({top:0})">↑</button>
-
-<script>
-// Foto de la universidad subida al repositorio
-const UNI="IMG_2348.png";
-
+const companeros=[
+["Macarena Enriquez","https://macarenaenriquez-oss.github.io/maca.github.io/"],
+["Eduardo Flores","https://eduardosebastianfloressoto.github.io"],
+["Luciana Cárdenas","https://luciananicolecardenaslopez.github.io"],
+["Mattias Galdos","https://mattiasgaldosibarcena.github.io"],
+["Rafael Chirinos","https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/"],
+["Renzo Arenas","https://renzo-arenas.github.io/RenzoArenas.github.io/"],
+["Abel Gamboa","https://abelgamboa.github.io/abelvalentinogamboaespejo.github.io/"]
+];
 const test=new Image();
 test.onload=()=>{
   document.getElementById("uni").src=UNI;
